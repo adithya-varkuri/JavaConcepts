@@ -3,6 +3,7 @@ package com.immutableclass;
 import java.util.HashMap;
 import java.util.Iterator;
 
+//made this class as final so that no other class can extends this immutable class
 final public class ImmutableEmployee {
 	
 	private final String empName;
@@ -14,6 +15,7 @@ final public class ImmutableEmployee {
 	      super();
 	      this.empName = name;
 	      this.age = age;
+	      //create new reference and assign values because if we pass values by reference in constructor there might be chance of changing  values.
 	      HashMap<String,String> tempMap=new HashMap<String,String>();
 			String key;
 			Iterator<String> it = map.keySet().iterator();
